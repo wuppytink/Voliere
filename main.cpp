@@ -15,9 +15,9 @@ string vogelName;
 int auswahl;
 bool run = true;
 int vogelAuswahl = 0;
-    
+    CVoliere kaefig = CVoliere();   
     while(run){ 
-    CVoliere kaefig = CVoliere(1);
+
     cout << "Was wollen Sie tun?\n"
             "1 - einen Vogel hinzufügen\n"
             "2 - einen Vogel entfernen\n"
@@ -42,18 +42,16 @@ int vogelAuswahl = 0;
                     CVogel* pBird = new CVogel;
                     switch(vogelAuswahl){
                         case 1:{
-//cout << pBird <<endl; 
-                            CTaube taube = CTaube(vogelName);
-                            pBird = &taube;
-//cout << "pBird " << pBird << " *pBird " << (*pBird).getName() << " taube: " << taube.getName() << " &taube: " << &taube << endl;                            
+                            CTaube *taube = new CTaube(vogelName);
+                            pBird = taube;                           
                             break;}
                         case 2:{
-                            CRabe rabe = CRabe(vogelName);
-                            pBird = &rabe;
+                            CRabe *rabe = new CRabe(vogelName);
+                            pBird = rabe;
                             break;}
                         case 3:{
-                            CSpatz spatz = CSpatz(vogelName);
-                            pBird = &spatz;
+                            CSpatz *spatz = new CSpatz(vogelName);
+                            pBird = spatz;
                             break;}
                     }
             
@@ -75,9 +73,9 @@ int vogelAuswahl = 0;
     
     //Katze setzten
         case 4:{
-            cout << "Ist die Katze agressiv?\n";
+            cout << "Ist die Katze agressiv? (J/N)\n";
             cin >> antwort;
-            if(antwort == 'J') cat = true;
+            if(antwort == 'J'){cat = true;}else{cat = false;}
             break;}            
 
     //voliere simulieren, geht nicht

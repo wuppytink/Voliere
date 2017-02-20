@@ -8,7 +8,7 @@ public:
         CTaube(string v);
         ~CTaube();
     
-    virtual void sing();
+    virtual void sing(bool cat);
     virtual string race();
 };
 

@@ -14,9 +14,8 @@ protected:
     vector<CVogel*> meineVoliere;
 
 public:
-    CVoliere(int size);
+    CVoliere();
     ~CVoliere();
-    
     
     void addBird(CVogel* v);
     void deleteBird(string v);

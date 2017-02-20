@@ -8,7 +8,7 @@ class CSpatz: public CVogel{
         CSpatz(string v);
         ~CSpatz();
     
-    virtual void sing();
+    virtual void sing(bool cat);
     virtual string race();
 };
 

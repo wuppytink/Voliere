@@ -8,7 +8,7 @@ class CRabe: public CVogel{
          CRabe(string v);
         ~CRabe();
         
-    virtual void sing();
+    virtual void sing(bool cat);
     virtual string race();
 };
 

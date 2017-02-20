@@ -15,8 +15,8 @@ public:
     ~CVogel(){}
     
     string getName(){return name;}
-    virtual void sing() const {cout << "Alle Voegel sind schon da!\n";}
-    virtual string race() const{cout << "";}
+    virtual void sing(bool cat) {cout << "Alle Voegel sind schon da!\n";}
+    virtual string race() {cout << "";}
 };
 
 #endif
